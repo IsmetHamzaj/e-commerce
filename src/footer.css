@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.footer {
+    bottom: 0%;
+}
+
+.footer .copyright {
+    margin: 10px 30px;
+}
+
+.terms {
+    display: flex;
+    text-indent: 20px;
+    padding: 10px;
+}
+
+.email {
+    border: none;
+    border-bottom: 1px solid;
+    width: 400px;
+}
+
+.email::placeholder {
+    text-align: center;
+}
