@@ -1,7 +1,10 @@
 import React from 'react'
 import { AiOutlineUser, AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai'
+import { useAuth } from './../../auth'
 import styles from './Header.module.scss'
+
 const Header = () => {
+    const auth = useAuth()
     return (
         <div className={styles.header}>
             <div className={styles.logo}>
@@ -24,7 +27,11 @@ const Header = () => {
                 <div className={styles.icons}>
                     <AiOutlineSearch />
                     <AiOutlineShoppingCart />
-                    <AiOutlineUser />
+                    {
+                        !auth && (
+                            <AiOutlineUser />
+                        )
+                    }
                 </div>
             </div>
         </div>
