@@ -1,5 +1,5 @@
 import { Outlet } from "react-router";
-import LogIn from './components/LogIn/index'
+import LogIn from './pages/LogIn/index'
 
 const useAuth = () => {
     const user = { loggedIn: false }
