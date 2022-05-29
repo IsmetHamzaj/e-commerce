@@ -6,8 +6,13 @@ import { BrowserRouter } from 'react-router-dom'
 const App = () => {
     <BrowserRouter>
         <Routes>
-            {
-                Links?.map((route, index) => (route?.private ? <ProtectedRoutes /> : <Route path={route?.path} element={route?.Component} />))
+            {Links?.map((route, index) => {
+                <Route
+                    index={index}
+                    path={route?.private ? "/login" : route?.path}
+                    element={route?.private ? <ProtectedRoutes route={route} /> : route?.Component}
+                />
+            })
             }
         </Routes>
     </BrowserRouter>

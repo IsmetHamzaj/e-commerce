@@ -1,13 +1,12 @@
-import { Outlet } from "react-router";
-import LogIn from './pages/LogIn/index'
+import { Navigate } from "react-router";
 
-const useAuth = () => {
-    const user = { loggedIn: false }
-    return user && user.loggedIn
-}
+const ProtectedRoute = ({ user, children }) => {
+    if (!user) {
+        return <Navigate to="/login" replace />;
+    }
 
-const ProtectedRoutes = () => {
-    const isAuth = useAuth()
-    return isAuth ? <Outlet /> : <LogIn />
-}
-export default ProtectedRoutes
+    return children;
+};
+
+
+export default ProtectedRoute

@@ -6,7 +6,7 @@ const MyAccount = () => {
     const auth = useAuth()
     const navigate = useNavigate()
     const handleLogout = () => {
-        auth.logout()
+        // auth.logout()
         navigate('/my-account')
     }
     return (

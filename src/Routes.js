@@ -1,6 +1,7 @@
 import React from "react";
 import Home from './pages/Home'
 import Blog from './pages/Blog'
+import LogIn from './pages/LogIn'
 import Shop from './pages/Shop'
 import Product from './components/Product'
 import Contact from './pages/Contact'
@@ -17,11 +18,14 @@ import Privacy from './components/Privacy'
 import ResetPassword from './components/ResetPassword'
 import ShoppingBag from './components/ShoppingBag'
 import ViewOrder from './components/ViewOrder'
-const Links = () => {
-    [
+const Links = [
         {
             path: "/",
             Component: <Home />
+        },
+        {
+            path: '/login',
+            Component: <LogIn />
         },
         {
             path: "/shop",
@@ -32,7 +36,7 @@ const Links = () => {
             Component: <Product />
         },
         {
-            path: "/contat",
+            path: "/contact",
             Component: <Contact />
         },
         {
@@ -46,10 +50,6 @@ const Links = () => {
         {
             path: "*",
             Component: "This route doesnt exist"
-        },
-        {
-            path: "/ourstory",
-            Component: <OurStory />
         },
         {
             path: "/my-account",
@@ -111,7 +111,6 @@ const Links = () => {
             Component: <ShoppingBag />,
             private: true
         },
-    ]
-}
+]
 
 export default Links
