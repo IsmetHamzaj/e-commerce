@@ -1,9 +1,9 @@
 import React from 'react'
-import { useAuth } from '../../auth'
+// import { useAuth } from '../../auth'
 import { useNavigate } from 'react-router-dom'
 import LayOut from '../../layouts/LayoutFile'
 const MyAccount = () => {
-    const auth = useAuth()
+    // const auth = useAuth()
     const navigate = useNavigate()
     const handleLogout = () => {
         // auth.logout()
@@ -11,7 +11,7 @@ const MyAccount = () => {
     }
     return (
         <div>
-            Welcome {auth.user}
+            {/* Welcome {auth.user} */}
             <button onClick={handleLogout}>Log Out</button>
         </div>
     )

@@ -21,35 +21,42 @@ import ViewOrder from './components/ViewOrder'
 const Links = [
         {
             path: "/",
-            Component: <Home />
+            Component: <Home />,
+            private: false
         },
-        {
-            path: '/login',
-            Component: <LogIn />
-        },
+        // {
+        //     path: '/login',
+        //     Component: <LogIn />
+        // },
         {
             path: "/shop",
-            Component: <Shop />
+            Component: <Shop />,
+            private: false
         },
         {
             path: "/product",
-            Component: <Product />
+            Component: <Product />,
+            private: false
         },
         {
             path: "/contact",
-            Component: <Contact />
+            Component: <Contact />,
+            private: false
         },
         {
             path: "/blog",
-            Component: <Blog />
+            Component: <Blog />,
+            private: false
         },
         {
             path: "/ourstory",
-            Component: <OurStory />
+            Component: <OurStory />,
+            private: false
         },
         {
             path: "*",
-            Component: "This route doesnt exist"
+            Component: "This route doesnt exist",
+            private: false
         },
         {
             path: "/my-account",
