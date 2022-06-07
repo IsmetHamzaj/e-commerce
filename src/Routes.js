@@ -54,11 +54,6 @@ const Links = [
             private: false
         },
         {
-            path: "*",
-            Component: "This route doesnt exist",
-            private: false
-        },
-        {
             path: "/my-account",
             Component: <MyAccount />,
             private: true
