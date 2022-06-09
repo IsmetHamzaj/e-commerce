@@ -2,9 +2,9 @@ import React from 'react'
 import LayOut from '../../layouts/LayoutFile'
 // import auth from '../../auth'
 const Home = () => {
-    return(
+    return( 
         <div>
-            <h1>Log In</h1>
+            <h1>This is the homepage</h1>
             {/* <button onClick={
                 () => {
                     auth.login(() => {

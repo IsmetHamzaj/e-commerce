@@ -3,38 +3,39 @@ import { useAuth } from '../../auth'
 import { useNavigate } from 'react-router-dom'
 import auth from '../../auth'
 import LayOut from '../../layouts/LayoutFile'
-const LogIn = () => {
-    const [user, setUser] = React.useState(null);
-
-    const handleLogin = () => setUser({ id: '1', name: 'robin' });
-    const handleLogout = () => setUser(null);
+function LogIn({ Login, error }) {
+    const [details, setDetails] = useState({ name: "", email: "", password: ""});
+    const submitHandler = e => {
+        e.preventDefault()
+        Login(details)
+    }
     return (
-        <>
-            {
-                user ? (
-                    <button onClick={handleLogout} > Sign Out</button>
-                ) : (
-                    <button onClick={handleLogin}>Sign In</button>
-                )
-            }
-        </>
+        <form onSubmit={submitHandler}>
+            <div>
+                <h2>Log In</h2>
+                {
+                    (error != "") ? (
+                        <div>{error}</div>
+                    ) : (
+                        ""
+                    )
+                }
+                <div>
+                    <label htmlFor='name'>Name: </label>
+                    <input type="text" name="name" id="name" onChange={e => setDetails({...details, name: e.target.value})} value={details.name} />
+                </div>
+                <div>
+                    <label htmlFor='email'>Email:</label>
+                    <input type="email" name="email" id="email" onChange={e => setDetails({...details, email: e.target.value})} value={details.email} />
+                </div>
+                <div>
+                    <label htmlFor='password'>Password: </label>
+                    <input type="password" name='password' id="password" onChange={e => setDetails({...details, password: e.target.value})} value={details.password} />
+                </div>
+                <input type="submit" value="LOGIN" />
+            </div>
+        </form>
     )
-    // const [user, setUser] = useState("")
-    // const auth = useAuth()
-    // const navigate = useNavigate()
-    // const handleLogin = () => {
-    //     auth.login(user)
-    //     navigate('/my-account')
-    // }
-    // return (
-    //     <div>
-    //         <label>
-    //             Username: {' '}
-    //             <input type="text" onChange={(e) => setUser(e.target.value)} />
-    //         </label>
-    //         <button onClick={handleLogin}>LogIn</button>
-    //     </div>
-    // )
 }
 
 export default LayOut(LogIn)

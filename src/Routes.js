@@ -24,10 +24,10 @@ const Links = [
             Component: <Home />,
             private: false
         },
-        // {
-        //     path: '/login',
-        //     Component: <LogIn />
-        // },
+        {
+            path: '/login',
+            Component: <LogIn />
+        },
         {
             path: "/shop",
             Component: <Shop />,
@@ -56,7 +56,7 @@ const Links = [
         {
             path: "/my-account",
             Component: <MyAccount />,
-            private: true
+            private: false
         },
         {
             path: "/my-account/address",

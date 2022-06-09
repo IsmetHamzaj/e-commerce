@@ -1,35 +1,44 @@
-import React from 'react'
+import React, {useState} from 'react'
 // import { useAuth } from '../../auth'
 import { Link, useNavigate } from 'react-router-dom'
 import { Navigate } from 'react-router'
 import LayOut from '../../layouts/LayoutFile'
 import LogIn from '../LogIn'
-const MyAccount = ({logout}) => {
+const MyAccount = () => {
+    const adminUser = {
+        email: "admin@admin.com",
+        password: "admin123"
+    }
+    const [user,setUser] = useState({name: "", email: ""})
+    const [error, setError] = useState("")
+
+    const Login = details => {
+        if(details.email == adminUser.email && details.password == adminUser.password) {
+            console.log("Logged in")
+        } else{
+            console.log("wrong credentials")
+            setError("Wrong credentials")
+        }
+    }
+
+    const Logout = () => {
+        setUser({name: "", email: "" })
+    }
     return(
         <div>
-            <Link to="/my-account">My Account</Link>
-            <h1>
-                Hi you are logged in
-            </h1>
-            <button onClick={logout}>LogOut</button>
+            <h1>My Account</h1>
+            {
+                (user.email != "") ? (
+                    <div>
+                        <h2>Welcome <span>{user.name}</span></h2>
+                        <button onClick={Logout}>Logout</button>
+                    </div>
+                ) : (
+                    <LogIn Login={Login} error={error} />
+                )
+            }
         </div>
     )
-    // if(!user) {
-    //     return <Navigate to="/login" replace />
-    // }
-    // // const auth = useAuth()
-    // const navigate = useNavigate()
-    // const handleLogout = () => {
-    //     // auth.logout()
-    //     navigate('/my-account')
-    // }
-    // return (
-    //     <div>
-    //         {/* Welcome {auth.user} */}
-    //         <button onClick={handleLogout}>Log Out</button>
-    //     </div>
-    // )
-
 }
 
 export default LayOut(MyAccount)
