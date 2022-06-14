@@ -14,22 +14,6 @@ const MyAccount = ({logout}) => {
             <button onClick={logout}>LogOut</button>
         </div>
     )
-    // if(!user) {
-    //     return <Navigate to="/login" replace />
-    // }
-    // // const auth = useAuth()
-    // const navigate = useNavigate()
-    // const handleLogout = () => {
-    //     // auth.logout()
-    //     navigate('/my-account')
-    // }
-    // return (
-    //     <div>
-    //         {/* Welcome {auth.user} */}
-    //         <button onClick={handleLogout}>Log Out</button>
-    //     </div>
-    // )
-
 }
 
 export default LayOut(MyAccount)
