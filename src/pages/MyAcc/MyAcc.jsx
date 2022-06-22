@@ -3,7 +3,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Navigate } from 'react-router'
 import LayOut from '../../layouts/LayoutFile'
-import LogIn from '../LogIn'
+import LogIn from '../../components/LogIn'
 const MyAccount = ({logout}) => {
     return(
         <div>
