@@ -1,10 +1,6 @@
 import { React, useState } from 'react'
-import { useAuth } from '../../auth'
-
 import { useNavigate } from 'react-router-dom'
-// import auth from '../../auth'
 import LayOut from '../../layouts/LayoutFile'
-// import { useForm } from 'react-hook-form/dist/useForm'
 const LogIn = () => {
 
     return(

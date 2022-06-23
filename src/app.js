@@ -10,7 +10,7 @@ const App = () => {
                 {Links?.map((route, index) => {
                     return (
                         <Route
-                            index={index}
+                            key={index}
                             path={route?.private ? "/login" : route?.path}
                             element={route?.private ? <ProtectedRoutes route={route} /> : route?.Component}
                         />
