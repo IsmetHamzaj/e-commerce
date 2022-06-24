@@ -24,10 +24,10 @@ const Links = [
             Component: <Home />,
             private: false
         },
-        // {
-        //     path: '/login',
-        //     Component: <LogIn />
-        // },
+        {
+            path: '/login',
+            Component: <LogIn />
+        },
         {
             path: "/shop",
             Component: <Shop />,
