@@ -18,11 +18,16 @@ import Privacy from './components/Privacy'
 import ResetPassword from './components/ResetPassword'
 import ShoppingBag from './components/ShoppingBag'
 import ViewOrder from './components/ViewOrder'
+import Register from "./components/Register/Register";
 const Links = [
         {
             path: "/",
             Component: <Home />,
             private: false
+        },
+        {
+            path: '/register',
+            Component: <Register />
         },
         {
             path: '/login',

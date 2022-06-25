@@ -1,60 +1,51 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-.footer_container {
-    padding: 4rem 0 4rem 0;
-    border-top: 1px solid black;
-    margin: 30% 0%;
-}
-
-.footer {
-    width: 80%;
-    height: 40vh;
-    color: black;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0 auto;
-}
-
-.footer_heading {
-    display: flex;
-    flex-direction: column;
-    margin-right: 4rem;
-}
-
-.terms {
-    display: flex;
-    padding: 1rem 0;
-    text-indent: 20px;
-    margin: 0px -17px;
-    width: 500px;
-}
-
-.icon {
-    display: flex;
-    margin: 0 auto;
-    text-align: end;
-    padding: 1rem 1rem;
-}
-
-.icon {
-    div {
-        padding: 0rem 0.5rem;
-    }
-}
-
-.email {
-    border: none;
-    border-bottom: 1px solid;
-    width: 400px;
-    padding: 0.8rem 0;
-}
-
-.email::placeholder {
+.App {
     text-align: center;
+    background-color: green;
+}
+
+.label {
+    display: block;
+    font-size: larger;
+    color: white;
+    padding: 5px;
+}
+
+.input {
+    font-size: larger;
+    padding: 5px;
+    margin: 2px;
+
+}
+
+.btn {
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    font-size: larger;
+    display: block;
+    padding: 5px;
+    margin: 10px auto;
+}
+
+.messages {
+    display: flex;
+    justify-content: center;
+}
+
+.error {
+    display: block;
+    background-color: red;
+    color: white;
+    width: fit-content;
+    height: 50px;
+    padding: 5px;
+}
+
+.success {
+    display: block;
+    background-color: lightblue;
+    color: black;
+    width: fit-content;
+    height: 50px;
+    padding: 5px;
 }
