@@ -3,22 +3,25 @@ import Links from './Routes'
 import ProtectedRoutes from './ProtectedRoutes'
 import { Route, Routes } from 'react-router'
 import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
 const App = () => {
     return (
-        <BrowserRouter>
-            <Routes>
-                {Links?.map((route, index) => {
-                    return (
-                        <Route
-                            key={index}
-                            path={route?.private ? "/login" : route?.path}
-                            element={route?.private ? <ProtectedRoutes route={route} /> : route?.Component}
-                        />
-                    );
-                })
-                }
-            </Routes>
-        </BrowserRouter>
+        
+            <BrowserRouter>
+                <Routes>
+                    {Links?.map((route, index) => {
+                        return (
+                            <Route
+                                key={index}
+                                path={route?.private ? "/login" : route?.path}
+                                element={route?.private ? <ProtectedRoutes route={route} /> : route?.Component}
+                            />
+                        );
+                    })
+                    }
+                </Routes>
+            </BrowserRouter>
+        
     );
 }
 
