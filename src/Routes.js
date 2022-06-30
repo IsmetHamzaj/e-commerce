@@ -27,11 +27,13 @@ const Links = [
         },
         {
             path: '/register',
-            Component: <Register />
+            Component: <Register />,
+            private: false
         },
         {
             path: '/login',
-            Component: <LogIn />
+            Component: <LogIn />,
+            private: false
         },
         {
             path: "/shop",
