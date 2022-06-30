@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit/dist/createSlice";
 
+
 const initials = {
     IS_LOGGED_IN: false
 }
@@ -14,3 +15,6 @@ export const reducer = createSlice({
         }
     }
 })
+
+
+export const action = reducer.actions
