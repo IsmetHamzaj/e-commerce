@@ -4,9 +4,9 @@ import ProtectedRoutes from './ProtectedRoutes'
 import { Route, Routes } from 'react-router'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
+import { store } from './Store/Store'
 const App = () => {
     return (
-        
             <BrowserRouter>
                 <Routes>
                     {Links?.map((route, index) => {
