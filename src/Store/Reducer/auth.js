@@ -1,8 +1,9 @@
-import { createSlice } from "@reduxjs/toolkit/dist/createSlice";
+import { createSlice } from "@reduxjs/toolkit";
 
 
 const initials = {
-    IS_LOGGED_IN: false
+    IS_LOGGED_IN: false,
+    products: []
 }
 
 // export const Reducer = (state = {} , action ) => {
@@ -14,14 +15,19 @@ const initials = {
 
 export const slice = createSlice({
     name: 'Ismet',
-    initials: initials,
+    initialState: initials,
     reducers: {
         login: (state, action) => {
-            action.payload
             state.IS_LOGGED_IN = action.payload
+        },
+        addProduct: (state, action) => {
+            state.products = [...state.products, action.payload]
+        },
+        deleteProduct: (state, action) => {
+            state.products.splice(action.payload, 1)
         }
     }
 })
 
 
-export const action = reducer.actions
+export const action = slice.actions
