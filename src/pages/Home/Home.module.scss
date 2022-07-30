@@ -1,5 +1,102 @@
-* {
+*{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+}
+.title{
+    position: absolute;
+    width: 185px;
+    height: 43px;
+    left: 623px;
+    top: 251px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 43px;
+
+    color: #000000;
+}
+.sigin_btn {
+    box-sizing: border-box;
+    position: absolute;
+    width: 236px;
+    height: 50px;
+    left: 476px;
+    top: 363px;
+
+    background: #ffffff;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+.register_btn{
+    position: absolute;
+    width: 75px;
+    height: 26px;
+    left: 812px;
+    top: 376px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+}
+.email{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #D8D8D8;
+    width: 500px;
+    height: 8px;
+    left: 471px;
+    top: 583px;
+}
+.password {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #D8D8D8;
+    width: 500px;
+    height: 8px;
+    left: 471px;
+    top: 668px;
+}
+.check{
+    box-sizing: border-box;
+    position: absolute;
+    left: 32.91%;
+    right: 65.97%;
+    top: 50.66%;
+    bottom: 48.00%;
+    border: 1px solid #707070;
+    border-radius: 2px;
+}
+.remember{
+    position: absolute;
+    width: 109px;
+    height: 27px;
+    left: 495px;
+    top: 683px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 16px;
+    line-height: 27px;
+
+    color: #000000;
+}
+
+.btn{
+    box-sizing: border-box;
+    position: absolute;
+    width: 500px;
+    height: 53px;
+    left: 471px;
+    top: 773px;
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
 }
